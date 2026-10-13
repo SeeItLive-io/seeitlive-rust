@@ -1,0 +1,24 @@
+[package]
+name = "seeitlive-sdk"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+description = "Official SeeItLive SDK for Rust"
+
+[lib]
+name = "seeitlive"
+path = "src/lib.rs"
+
+[dependencies]
+reqwest = { version = "0.12", features = ["json"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+thiserror = "1"
+tokio = { version = "1", features = ["rt", "macros"] }
+hmac = "0.12"
+sha2 = "0.10"
+hex = "0.4"
+
+[dev-dependencies]
+wiremock = "0.6"
+tokio = { version = "1", features = ["rt", "macros", "rt-multi-thread"] }
